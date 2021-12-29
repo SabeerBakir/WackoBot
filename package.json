@@ -1,0 +1,28 @@
+{
+  "name": "wackobot",
+  "version": "1.0.0",
+  "description": "Wacko's first Discord Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SabeerBakir/WackoBot.git"
+  },
+  "keywords": [
+    "Discord"
+  ],
+  "author": "Sabeer Bakir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SabeerBakir/WackoBot/issues"
+  },
+  "homepage": "https://github.com/SabeerBakir/WackoBot#readme",
+  "dependencies": {
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "discord-api-types": "^0.26.0",
+    "discord.js": "^13.5.0",
+    "dotenv": "^10.0.0"
+  }
+}
