@@ -2,7 +2,7 @@
   "name": "wackobot",
   "version": "1.0.0",
   "description": "Wacko's first Discord Bot",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/SabeerBakir/WackoBot#readme",
   "dependencies": {
+    "@discordjs/builders": "^0.11.0",
     "@discordjs/rest": "^0.2.0-canary.0",
     "discord-api-types": "^0.26.0",
     "discord.js": "^13.5.0",
