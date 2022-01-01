@@ -2,7 +2,7 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 
-require("dotenv").config()
+require('dotenv').config();
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -23,7 +23,8 @@ for (const file of eventFiles) {
 	const event = require(`./events/${file}`);
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args));
-	} else {
+	}
+	else {
 		client.on(event.name, async (...args) => event.execute(...args));
 	}
 }
