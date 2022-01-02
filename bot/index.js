@@ -2,7 +2,13 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 
+// Environment variables
 require('dotenv').config();
+
+// Setup Logging
+const { loggers } = require('winston');
+require('./log.js');
+const logger = loggers.get('bot-logger');
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -15,6 +21,7 @@ for (const file of commandFiles) {
 	// Set a new item in the Collection
 	// With the key as the command name and the value as the exported module
 	client.commands.set(command.data.name, command);
+	logger.info(`Loading ${file} command`);
 }
 
 // Dynamically retrieve event actions from events folder
@@ -27,6 +34,7 @@ for (const file of eventFiles) {
 	else {
 		client.on(event.name, async (...args) => event.execute(...args));
 	}
+	logger.info(`Loading ${file} event`);
 }
 
 // Login to Discord with your client's token
