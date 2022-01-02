@@ -2,11 +2,11 @@
   "name": "wackobot",
   "version": "1.0.0",
   "description": "Wacko's first Discord Bot",
-  "main": "index.js",
+  "main": "bot/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "register-commands": "node deploy-commands.js",
-    "start": "node .",
+    "test": "mocha",
+    "register-commands": "cd bot; node deploy-commands.js",
+    "bot": "cd bot; node .",
     "lint": "eslint ."
   },
   "repository": {
@@ -30,6 +30,7 @@
     "dotenv": "^10.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.6.0"
+    "eslint": "^8.6.0",
+    "mocha": "^9.1.3"
   }
 }
